@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/rock-paper-scissor.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="title">Jajanken</p>
+      <div class="button-icon">
+        <button
+          onclick="
+
+        playGame('rock'); 
+
+      "
+          class="icon"
+        >
+          <img src="images/rock.png" alt="" srcset="" />
+        </button>
+
+        <button
+          onclick="
+
+        playGame('paper');
+
+        "
+          class="icon"
+        >
+          <img src="images/paper.png" alt="" srcset="" />
+        </button>
+
+        <button
+          onclick="
+        
+        playGame('scissor');
+
+      "
+          class="icon"
+        >
+          <img src="images/scissor.png" alt="" srcset="" />
+        </button>
+      </div>
+      <div class="result-info">
+        <p class="js-result results"></p>
+        <p class="js-moves moves"></p>
+        <p class="js-score-box"></p>
+      </div>
+
+      <button
+        onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScore();
+          "
+        class="reset-score"
+      >
+        Reset Score
+      </button>
+      <button
+        class="auto-play-button"
+        onclick="
+        autoPlay();
+      "
+      >
+        Auto Play
+      </button>
+    </div>
+
+    <script src="scripts/rock-paper-scissor.js"></script>
+  </body>
+</html>
